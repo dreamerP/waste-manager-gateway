@@ -1,20 +1,5 @@
-server:
-  port: 8081
 spring:
-  application:
-    name: api-gateway
-  cloud:
-    gateway:
-      discovery:
-        locator:
-          enabled: true
-
-eureka:
-  client:
-    register-with-eureka: false
-    fetch-registry: true
-    service-url:
-      defaultZone: http://localhost:8080/eureka
-  instance:
-    hostname: localhost
-    prefer-ip-address: true
+  application: 
+    name: API-GATEWAY
+  config: 
+     import: optional:configserver:http://WastemanagerAdmin:Test@localhost:8888
